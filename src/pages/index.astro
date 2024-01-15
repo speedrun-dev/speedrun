@@ -1,50 +1,71 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+
+    <style lang="scss">
+      a {
+        text-decoration: none;
+        border-bottom: 1px solid var(--orange);
+
+        &:hover {
+          color: var(--orange);
+        }
+      }
+
+      .mv {
+        border-bottom: 1px solid var(--orange);
+      }
+      .values {
+        text-decoration: var(--orange) line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Why, hello there!</h1>
+      <p>
+        If you've stumbled here somehow, welcome! Fret not, we will grow. But
+        for now, before adding a bunch of flashy useless things, feel free to
+        check the <a href="/blog">point</a> of Speedrun.
+      </p>
+
+      <h2>Our <span class="mv">mission</span></h2>
+      <p>
+        Have you ever needed to learn something really fast – like, for
+        yesterday if possible? We're here to help with that. The basic idea is:
+        why would you need tons of text to understand a basic concept? We'll
+        dumb it down, translate it to English, and teach you stuff in a couple
+        of minutes.<br /> After you learn it and get the idea of what's going on,
+        then we'll probably drop a wall of text to polish that knowledge. Maybe not,
+        it kinda depends on the topic.
+      </p>
+
+      <h2>Our <span class="mv">vision</span></h2>
+      <p>
+        One day, we will help everyone learn coding in just a couple of weeks!
+        The idea of "join this course and in a month you'll get ___ salary" will
+        actually become a reality. <br /> How? <br /> By writing code. Not just a
+        little code, but by writing a bunch of codes, and by not following the usual
+        route. Stay tuned...
+      </p>
+
+      <h2>Our... <span class="values">that third thing</span></h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi sequi
+        temporibus laboriosam incidunt adipisci pariatur reiciendis vel
+        quisquam, consequatur tempora! Quis tempora rerum magni, repellendus
+        quaerat corporis ullam eos laudantium.
+      </p>
+    </main>
+    <Footer />
+  </body>
 </html>
